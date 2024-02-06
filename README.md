@@ -16,10 +16,11 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 
 ## Contents
 * [Overview](#overview)
-* [Quickstart](#quickstart)
+* [**Quickstart**](#quickstart)
 * [Usage](#code)
   * [Requirement](#requirement)
   * [Dataset Preparation](#data)
+  * [**Prompts and CoT**](#prompts-and-engines)
   * [Training / Inferring](#runt5)
 * [References](#references)  
 
@@ -76,6 +77,21 @@ Use the **Flan-T5** as the backbone LLM reasoner:
   * [google/flan-t5-xl](https://huggingface.co/google/flan-t5-xl)
   * [google/flan-t5-xxl](https://huggingface.co/google/flan-t5-xxl)
 
+### Prompts and Engines
+
+We provide separate engines, and for each engine the source of the prompts in particular:
+* `prompt_state`: 
+  [instruction](https://github.com/nicolay-r/THOR-ECAC/blob/39b768cba5a652bc207725d707b5c41dece574ac/main.py#L143) 
+  wrapped into the 
+  [prompt](https://github.com/nicolay-r/THOR-ECAC/blob/39b768cba5a652bc207725d707b5c41dece574ac/src/utils.py#L9-L14)
+* `prompt_cause`: 
+  [instruction](https://github.com/nicolay-r/THOR-ECAC/blob/39b768cba5a652bc207725d707b5c41dece574ac/main.py#L142) 
+  wrapped into the 
+  [prompt](https://github.com/nicolay-r/THOR-ECAC/blob/39b768cba5a652bc207725d707b5c41dece574ac/src/utils.py#L9-L14)
+* `thor_state`: [Class of the prompts](src/cot_state.py)
+* `thor_cause`: [Class of the prompts](src/cot_cause.py)
+* `thor_cause_rr`: [Class of the prompts](src/cot_cause.py) same as `thor_cause`
+
 ### Training and Evaluating with Flan-T5<a name="runt5" />
 
 Use the [main.py](main.py) script with command-line arguments to run the 
@@ -92,6 +108,7 @@ python main.py
     -bs 32 \
     -f <yaml_config> 
 ```
+
 <details>
 <summary>
 
