@@ -1,13 +1,4 @@
 ## THOR: Three-hop Reasoning for Emotion Cause Analysis in Context
-<a href="https://huggingface.co/docs/transformers/model_doc/flan-t5" rel="nofollow">
-  <img src="https://img.shields.io/badge/Flan-T5-purple" alt="Build Status">
-</a>
-<a href="https://huggingface.co/docs/transformers/index" rel="nofollow">
-  <img src="https://img.shields.io/badge/transformers-4.24.0-green" alt="Build Status">
-</a>
-<a href="https://pytorch.org" rel="nofollow">
-  <img src="https://img.shields.io/badge/pytorch-1.10.0-orange" alt="pytorch 1.8.1">
-</a>
 
 
 **The PyTorch reforged and forked version of the official 
@@ -23,12 +14,13 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 
 > **NOTE:** List of the changes from the original THoR
 
-## Quick Links
-- [Overview](#overview)
-- [Code Usage](#code)
-  - [Requirement](#requirement)
-  - [Dataset](#data)
-- [References](#references)  
+## Contents
+* [Overview](#overview)
+* [Code Usage](#code)
+  * [Quickstart](#quickstart)
+  * [Requirement](#requirement)
+  * [Dataset](#data)
+* [References](#references)  
 
 ## Overview<a name="overview" />
 
@@ -38,7 +30,6 @@ Supported by Emotion State with Chain-of-Thoughts]()**
   <img src="./figures/task.png" width="450"/>
 </p>
 
-
 > Framework illustration.
 
 <p align="center">
@@ -46,6 +37,13 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 </p>
 
 ## Code Usage<a name="code" />
+
+### Quickstart
+
+We provide a [google-colab notebook]()
+for downloading all the necessary data, followed by launching 
+experiments with `NVidia-V100`/ or `NVidia-A100`.
+
 
 ### Requirement<a name="requirement" />
 
@@ -55,17 +53,22 @@ pip install -r requirements.txt
 
 ### Dataset<a name="data" />
 
-> TO BE ADDED.
+We utilize the following pre-processed collections:
+* `D-state`: train and validation data
+* `D-cause`: train, validation and test data.
 
 ### LLMs<a name="llm" />
 
 A. Use the Flan-T5 as the backbone LLM reasoner:
-  - [google/flan-t5-base](https://huggingface.co/google/flan-t5-base),  
-  - [google/flan-t5-large](https://huggingface.co/google/flan-t5-large), 
-  - [google/flan-t5-xl](https://huggingface.co/google/flan-t5-xl),  
-  - [google/flan-t5-xxl](https://huggingface.co/google/flan-t5-xxl),  
+  * [google/flan-t5-base](https://huggingface.co/google/flan-t5-base)
+  * [google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
+  * [google/flan-t5-xl](https://huggingface.co/google/flan-t5-xl)
+  * [google/flan-t5-xxl](https://huggingface.co/google/flan-t5-xxl)
 
 ### Training and Evaluating with Flan-T5<a name="runt5" />
+<a href="https://huggingface.co/docs/transformers/model_doc/flan-t5" rel="nofollow">
+  <img src="https://img.shields.io/badge/Flan-T5-purple" alt="Build Status">
+</a>
 
 Use the [main.py](main.py) script with command-line arguments to run the 
 **Flan-T5-based** THOR system. 
@@ -83,7 +86,6 @@ python main.py
     -f <yaml_config> 
 ```
 Some important arguments:
-
 * `-c`, `--cuda_index`: Index of the GPU to use for computation (default is 0).
 * `-d`, `--data_name`: Name of the dataset. Choices are 'restaurants' or 'laptops' (default is 'laptops').
 * `-r`, `--reasoning`: Specifies the reasoning mode, with one-step prompt or multi-step thor mode (default is 'thor').
