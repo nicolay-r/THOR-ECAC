@@ -10,9 +10,9 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 
 > **NOTE:** Since the existed fork aimed on a variety non-commercial projects application, 
 > this repository represent **a copy** of the originally published code with the folllowing 
-> [enhancements and changes]()
+> [🔧 enhancements and changes](CHANGESET.md)
 
-> **NOTE:** List of the changes from the original THoR
+> **NOTE:** [List of the changes](CHANGESET.md) from the original THoR
 
 ## Contents
 * [Overview](#overview)
