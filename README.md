@@ -16,10 +16,11 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 
 ## Contents
 * [Overview](#overview)
-* [Code Usage](#code)
-  * [Quickstart](#quickstart)
+* [Quickstart](#quickstart)
+* [Usage](#code)
   * [Requirement](#requirement)
-  * [Dataset](#data)
+  * [Dataset Preparation](#data)
+  * [Training / Inferring](#runt5)
 * [References](#references)  
 
 ## Overview<a name="overview" />
@@ -36,14 +37,14 @@ Supported by Emotion State with Chain-of-Thoughts]()**
   <img src="./figures/framework.png" width="1000"/>
 </p>
 
-## Code Usage<a name="code" />
-
-### Quickstart
+## Quickstart
 
 We provide a [google-colab notebook]()
-for downloading all the necessary data, followed by launching 
+for downloading all the necessary data, followed by launching
 experiments with `NVidia-V100`/ or `NVidia-A100`.
 
+
+## Usage<a name="code" />
 
 ### Requirement<a name="requirement" />
 
@@ -51,24 +52,31 @@ experiments with `NVidia-V100`/ or `NVidia-A100`.
 pip install -r requirements.txt
 ```
 
-### Dataset<a name="data" />
+### Datasets<a name="data" />
 
-We utilize the following pre-processed collections:
-* `D-state`: train and validation data
-* `D-cause`: train, validation and test data.
+We provide `download_data.py` script for downloading all the necessary datasets (`D_state` and `D_cause`).
+
+```python
+python download_data.py \
+  --cause-test "https://www.dropbox.com/scl/fi/4b2ouqdhgifqy3pmopq08/cause-mult-test.csv?rlkey=tkw0p1e01vezrjbou6v7qh36a&dl=1" \
+  --cause-train "https://www.dropbox.com/scl/fi/0tlkwbe5awcss2qmihglf/cause-mult-train.csv?rlkey=x9on1ogzn5kigx7c32waudi21&dl=1" \
+  --cause-valid "https://www.dropbox.com/scl/fi/8zjng2uyghbkpbfcogj6o/cause-mult-valid.csv?rlkey=91dgg4ly7p23e3id2230lqsoi&dl=1" \
+  --state-train "https://www.dropbox.com/scl/fi/0lokgaeo973wo82ig01hy/state-mult-train.csv?rlkey=tkt1oyo8kwgqs6gp79jn5vbh8&dl=1" \
+  --state-valid "https://www.dropbox.com/scl/fi/eu4yuk8n61izygnfncnbo/state-mult-valid.csv?rlkey=tlg8rac4ofkbl9o4ipq6dtyos&dl=1"
+```
 
 ### LLMs<a name="llm" />
+<a href="https://huggingface.co/docs/transformers/model_doc/flan-t5" rel="nofollow">
+  <img src="https://img.shields.io/badge/Flan-T5-purple" alt="Build Status">
+</a>
 
-A. Use the Flan-T5 as the backbone LLM reasoner:
+Use the **Flan-T5** as the backbone LLM reasoner:
   * [google/flan-t5-base](https://huggingface.co/google/flan-t5-base)
   * [google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
   * [google/flan-t5-xl](https://huggingface.co/google/flan-t5-xl)
   * [google/flan-t5-xxl](https://huggingface.co/google/flan-t5-xxl)
 
 ### Training and Evaluating with Flan-T5<a name="runt5" />
-<a href="https://huggingface.co/docs/transformers/model_doc/flan-t5" rel="nofollow">
-  <img src="https://img.shields.io/badge/Flan-T5-purple" alt="Build Status">
-</a>
 
 Use the [main.py](main.py) script with command-line arguments to run the 
 **Flan-T5-based** THOR system. 
@@ -78,18 +86,21 @@ Use the [main.py](main.py) script with command-line arguments to run the
 python main.py 
     -c <cuda_index> \
     -r [prompt|thor_state|thor_cause|thor_cause_rr]  \ 
-    -d se24 \
-    [-z] \
+    -d [state_se24|cause_se24] \
     -lf <path-to-the-pretrained-state \
     -es 10 \
     -bs 32 \
     -f <yaml_config> 
 ```
-Some important arguments:
+<details>
+<summary>
+
+### Parameters list
+</summary>
+
 * `-c`, `--cuda_index`: Index of the GPU to use for computation (default is 0).
-* `-d`, `--data_name`: Name of the dataset. Choices are 'restaurants' or 'laptops' (default is 'laptops').
-* `-r`, `--reasoning`: Specifies the reasoning mode, with one-step prompt or multi-step thor mode (default is 'thor').
-* `-z`, `--zero_shot`: If True, the system directly performs zero-shot prediction, otherwise run the fine-tuning on the train set (default is True).
+* `-d`, `--data_name`: Name of the dataset. Choices are `state_se24` or `cause_se24`.
+* `-r`, `--reasoning`: Specifies the reasoning mode, with one-step prompt or multi-step thor mode.
 * `-f`, `--config`: Specifies the location of [config.yaml](config/config.yaml) file.
 * `-li`, `--load_iter`: load a state on specific index from the same `data_name` resource (default `-1`, not applicable.)
 * `-lp`, `--load_path`: load a state on specific path
@@ -101,10 +112,11 @@ Some important arguments:
 * `-v`, `--validate`: running under zero-shot mode on `valid` set
 * `-i`, `--infer_iter`: running inference on `test` dataset to form answers.
 
-Configurate more parameters in [config.yaml](config/config.yaml) file.
+Configure more parameters in [config.yaml](config/config.yaml) file.
 
+</details>
 
-### References
+## References
 
 The original THoR project:
 ```bibtex
@@ -122,13 +134,13 @@ You can cite this work as follows:
 TO-BE-ADDED
 ```
 
-### Acknowledgement
+## Acknowledgement
 
 This code is referred from following projects:
 [CoT](https://arxiv.org/abs/2201.11903); 
 [Flan-T5](https://huggingface.co/docs/transformers/model_doc/flan-t5);
 [Transformers](https://github.com/huggingface/transformers),
 
-### License
+## License
 
 The code is released under Apache License 2.0 for Noncommercial use only. 
