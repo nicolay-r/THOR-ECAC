@@ -70,7 +70,12 @@ pip install -r requirements.txt
 
 ### Datasets<a name="data" />
 
-We provide `download_data.py` script for downloading all the necessary datasets (`D_state` and `D_cause`).
+### 👉 [Compile datasets manually](https://github.com/nicolay-r/SemEval2024-Task3) 👈
+
+**Serialize datasets**: We provide `download_data.py` script 
+for downloading and serialization of the manually compiled datasets 
+(`D_state` and `D_cause`).
+
 
 ```python
 python download_data.py \
