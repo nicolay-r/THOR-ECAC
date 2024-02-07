@@ -28,7 +28,12 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 
 ## Overview<a name="overview" />
 
-> Task Details.
+
+* **Input:** a conversation containing the speaker and the text of each utterance.
+* **Output:** all emotion-cause pairs, where each pair contains an emotion utterance along with its emotion category and the textual cause span in a specific cause utterance, e.g:
+  * (`U3_Joy`, `U2_“You made up!”`)
+
+> The complete description of the task is [available here](https://nustm.github.io/SemEval-2024_ECAC/).
 
 <p align="center">
   <img src="./figures/task.png" width="450"/>
@@ -85,8 +90,8 @@ Use the **Flan-T5** as the backbone LLM reasoner:
   * [google/flan-t5-xl](https://huggingface.co/google/flan-t5-xl)
   * [google/flan-t5-xxl](https://huggingface.co/google/flan-t5-xxl)
 
-We use `base` reasoner [in config](https://github.com/nicolay-r/THOR-ECAC/blob/23a2add3d77f251dfca5241153815d76eb4dee6b/config/config.yaml#L4-L5) by default.
-However, **it is highly recommended** to choose the largest reasoning model you can afford to fine-tune.
+> **NOTE**: We setup `base` reasoner in [config.yaml](https://github.com/nicolay-r/THOR-ECAC/blob/23a2add3d77f251dfca5241153815d76eb4dee6b/config/config.yaml#L4-L5).
+However, **it is highly recommended** to choose the largest reasoning model you can afford (`xl` or higher) for fine-tuning.
 
 ### Prompts and Engines
 
@@ -110,14 +115,13 @@ Use the [main.py](main.py) script with command-line arguments to run the
 
 
 ```bash
-python main.py 
-    -c <cuda_index> \
+python main.py -c <CUDA_INDEX> \
     -r [prompt|thor_state|thor_cause|thor_cause_rr]  \ 
     -d [state_se24|cause_se24] \
-    -lf <path/to/the/pretrained/state> \
-    -es 10 \
-    -bs 32 \
-    -f <yaml_config> 
+    -lf "optional/path/to/the/pretrained/state" \
+    -es <EPOCH_SIZE> \
+    -bs <BATCH_SIZE> \
+    -f <YAML_CONFIG> 
 ```
 
 <details>
