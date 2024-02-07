@@ -24,10 +24,10 @@ Supported by Emotion State with Chain-of-Thoughts]()**
   * [Dataset Preparation](#data)
   * [**Prompts and CoT**](#prompts-and-engines)
   * [Training / Inferring](#runt5)
+  * [**Submitting Results on Codalab**](#submitting-results-on-codalab)
 * [References](#references)  
 
 ## Overview<a name="overview" />
-
 
 * **Input:** a conversation containing the speaker and the text of each utterance.
 * **Output:** all emotion-cause pairs, where each pair contains an emotion utterance along with its emotion category and the textual cause span in a specific cause utterance, e.g:
@@ -52,6 +52,8 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 We provide a [google-colab notebook](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
 for downloading all the necessary data, followed by launching
 experiments with `NVidia-V100`/ or `NVidia-A100`.
+
+To form the Codalab Submission, please [follow this section](#submitting-results-on-codalab).
 
 
 ## Usage<a name="code" />
@@ -147,6 +149,17 @@ python main.py -c <CUDA_INDEX> \
 Configure more parameters in [config.yaml](config/config.yaml) file.
 
 </details>
+
+## Submitting Results on Codalab
+
+### 📊 [Codalab Competiton Page](https://codalab.lisn.upsaclay.fr/competitions/16141)
+
+All the service that is not related to the Codalab is a part of 
+**another repository** (link below 👇)
+
+Once results were inferred ([`THOR-cause-rr` results example](data/google_flan-t5-base-thor_cause_rr-output-sample.csv)), 
+you may refer to the following code to form a submission: 
+### 👉 [Codalab Service Repository](https://github.com/nicolay-r/SemEval2024-Task3) 👈
 
 ## References
 
