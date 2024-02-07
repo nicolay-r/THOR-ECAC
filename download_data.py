@@ -15,9 +15,6 @@ DATA_DIR = join(current_dir, "data")
 DS_CAUSE_NAME = "cause_se24"
 DS_CAUSE_DIR = join(DATA_DIR, DS_CAUSE_NAME)
 
-DS_CAUSE_S1_NAME = "cause_se24_sparse_d1"
-DS_CAUSE_S1_DIR = join(DATA_DIR, DS_CAUSE_NAME)
-
 DS_STATE_NAME = "state_se24"
 DS_STATE_DIR = join(DATA_DIR, DS_STATE_NAME)
 

@@ -6,7 +6,7 @@ from attrdict import AttrDict
 import pandas as pd
 from transformers import GenerationConfig
 
-from download_data import DS_CAUSE_NAME, DS_CAUSE_S1_NAME, DS_STATE_NAME, CAUSE_FINAL_DATA
+from download_data import DS_CAUSE_NAME, DS_STATE_NAME, CAUSE_FINAL_DATA
 from src.engine_prompt import PromptTrainer
 from src.engine_thor_cause import ThorCauseTrainer
 from src.engine_thor_cause_rr import ThorCauseReasoningRevisionTrainer
@@ -125,7 +125,7 @@ if __name__ == '__main__':
                         help='running infer mode on the `test` data set')
     parser.add_argument('-li', '--load_iter', default=-1, type=int, help='load a state on specific index')
     parser.add_argument('-lp', '--load_path', default=None, type=str, help="load a state on specific path")
-    parser.add_argument('-d', '--data_name', default=None, choices=[DS_CAUSE_NAME, DS_STATE_NAME, DS_CAUSE_S1_NAME])
+    parser.add_argument('-d', '--data_name', default=None, choices=[DS_CAUSE_NAME, DS_STATE_NAME])
     parser.add_argument('-f', '--config', default='./config/config.yaml', help='config file')
     parser.add_argument('-p', '--instruct', default=None, type=str,
                         help="instructive prompt for `prompt` training engine that involves `target` parameter only")
