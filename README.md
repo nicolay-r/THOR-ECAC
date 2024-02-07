@@ -1,5 +1,7 @@
 ## THOR: Three-hop Reasoning for Emotion Cause Analysis in Context
 
+![](https://img.shields.io/badge/Python-3.8-lightgreen.svg)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
 
 **The PyTorch reforged and forked version of the official 
 [THoR-framework](https://github.com/scofield7419/THOR-ISA),
@@ -16,7 +18,7 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 
 ## Contents
 * [Overview](#overview)
-* [**Quickstart**](#quickstart)
+* [**Quickstart in GoogleColab**](#quickstart)
 * [Usage](#code)
   * [Requirement](#requirement)
   * [Dataset Preparation](#data)
@@ -40,7 +42,9 @@ Supported by Emotion State with Chain-of-Thoughts]()**
 
 ## Quickstart
 
-We provide a [google-colab notebook]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
+
+We provide a [google-colab notebook](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
 for downloading all the necessary data, followed by launching
 experiments with `NVidia-V100`/ or `NVidia-A100`.
 
@@ -48,7 +52,11 @@ experiments with `NVidia-V100`/ or `NVidia-A100`.
 ## Usage<a name="code" />
 
 ### Requirement<a name="requirement" />
+![](https://img.shields.io/badge/Python-3.8-lightgreen.svg)
 
+This project has been tested under **Python-3.8**. 
+
+Using `pip`, you can install the necessary dependencies as follows:
 ``` bash 
 pip install -r requirements.txt
 ```
@@ -72,10 +80,13 @@ python download_data.py \
 </a>
 
 Use the **Flan-T5** as the backbone LLM reasoner:
-  * [google/flan-t5-base](https://huggingface.co/google/flan-t5-base)
+  * **[google/flan-t5-base](https://huggingface.co/google/flan-t5-base)**
   * [google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
   * [google/flan-t5-xl](https://huggingface.co/google/flan-t5-xl)
   * [google/flan-t5-xxl](https://huggingface.co/google/flan-t5-xxl)
+
+We use `base` reasoner [in config](https://github.com/nicolay-r/THOR-ECAC/blob/23a2add3d77f251dfca5241153815d76eb4dee6b/config/config.yaml#L4-L5) by default.
+However, **it is highly recommended** to choose the largest reasoning model you can afford to fine-tune.
 
 ### Prompts and Engines
 
@@ -103,7 +114,7 @@ python main.py
     -c <cuda_index> \
     -r [prompt|thor_state|thor_cause|thor_cause_rr]  \ 
     -d [state_se24|cause_se24] \
-    -lf <path-to-the-pretrained-state \
+    -lf <path/to/the/pretrained/state> \
     -es 10 \
     -bs 32 \
     -f <yaml_config> 
@@ -118,7 +129,6 @@ python main.py
 * `-c`, `--cuda_index`: Index of the GPU to use for computation (default is 0).
 * `-d`, `--data_name`: Name of the dataset. Choices are `state_se24` or `cause_se24`.
 * `-r`, `--reasoning`: Specifies the reasoning mode, with one-step prompt or multi-step thor mode.
-* `-f`, `--config`: Specifies the location of [config.yaml](config/config.yaml) file.
 * `-li`, `--load_iter`: load a state on specific index from the same `data_name` resource (default `-1`, not applicable.)
 * `-lp`, `--load_path`: load a state on specific path
 * `-p`, `--instruct`: instructive prompt for `prompt` training engine that involves `target` parameter only"
@@ -128,6 +138,7 @@ python main.py
 * `-t`, `--temperature`: temperature (default=gen_config.temperature)
 * `-v`, `--validate`: running under zero-shot mode on `valid` set
 * `-i`, `--infer_iter`: running inference on `test` dataset to form answers.
+* `-f`, `--config`: Specifies the location of [config.yaml](config/config.yaml) file.
 
 Configure more parameters in [config.yaml](config/config.yaml) file.
 
