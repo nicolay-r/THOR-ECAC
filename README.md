@@ -130,17 +130,17 @@ python main.py -c <CUDA_INDEX> \
 ### Parameters list
 </summary>
 
-* `-c`, `--cuda_index`: Index of the GPU to use for computation (default is 0).
+* `-c`, `--cuda_index`: Index of the GPU to use for computation (default: `0`).
 * `-d`, `--data_name`: Name of the dataset. Choices are `state_se24` or `cause_se24`.
 * `-r`, `--reasoning`: Specifies the reasoning mode, with one-step prompt or multi-step thor mode.
-* `-li`, `--load_iter`: load a state on specific index from the same `data_name` resource (default `-1`, not applicable.)
-* `-lp`, `--load_path`: load a state on specific path
+* `-li`, `--load_iter`: load a state on specific index from the same `data_name` resource (default: `-1`, not applicable.)
+* `-lp`, `--load_path`: load a state on specific path.
 * `-p`, `--instruct`: instructive prompt for `prompt` training engine that involves `target` parameter only"
 * `-es`, `--epoch_size`: amount of training epochs (default: `1`)
 * `-bs`, `--batch_size`: size of the batch (default: `None`)
 * `-lr`, `--bert_lr`: learning rate (default=`2e-4`)
 * `-t`, `--temperature`: temperature (default=gen_config.temperature)
-* `-v`, `--validate`: running under zero-shot mode on `valid` set
+* `-v`, `--validate`: running under zero-shot mode on `valid` set.
 * `-i`, `--infer_iter`: running inference on `test` dataset to form answers.
 * `-f`, `--config`: Specifies the location of [config.yaml](config/config.yaml) file.
 
