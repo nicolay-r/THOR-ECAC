@@ -81,6 +81,8 @@ python download_data.py \
   --state-valid "https://www.dropbox.com/scl/fi/eu4yuk8n61izygnfncnbo/state-mult-valid.csv?rlkey=tlg8rac4ofkbl9o4ipq6dtyos&dl=1"
 ```
 
+For reproduction purposes you may refer to the **[code of this supplementary repository](https://github.com/nicolay-r/SemEval2024-Task3)**. 
+
 ### LLMs<a name="llm" />
 <a href="https://huggingface.co/docs/transformers/model_doc/flan-t5" rel="nofollow">
   <img src="https://img.shields.io/badge/Flan-T5-purple" alt="Build Status">
