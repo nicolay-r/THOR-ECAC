@@ -137,6 +137,8 @@ if __name__ == '__main__':
                         help="Necessary for zero-shot option. For the training the default value of the "
                              "configuration from the `transformers` is better since we wish to get the same"
                              "result independing of the chosen path during generation.")
+    parser.add_argument('-bf16', '--use_bf16', action='store_true', default=False,
+                        help='Initializing Flan-T5 with torch.bfloat16')
 
     default_instructs = {
         "prompt_cause": "What emotion causes '{target}' towards the last conversation utterance?",

@@ -10,3 +10,4 @@
 * Enhanced cmd API. Some parameters were moved from the config.yaml.
 * Added task data downloader and resources formatter, suitable for original concepts utilized in loader (pickle).
 * Added feature: loading saved stated from the same resource by epoch-index (`-li`) / any checkpoint via file-path (`-lp`)
+* Support `bfloat16` mode for training or inferring large Flan-T5 models with less resources.

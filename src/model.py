@@ -6,7 +6,8 @@ class LLMBackbone(nn.Module):
     def __init__(self, config):
         super(LLMBackbone, self).__init__()
         self.config = config
-        self.engine = T5ForConditionalGeneration.from_pretrained(config.model_path)
+        self.engine = T5ForConditionalGeneration.from_pretrained(
+            config.model_path, torch_dtype=torch.bfloat16 if config.use_bf16 else None)
         self.tokenizer = AutoTokenizer.from_pretrained(config.model_path)
 
     def forward(self, **kwargs):
