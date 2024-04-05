@@ -186,7 +186,15 @@ The original THoR project:
 
 You can cite this work as follows:
 ```bibtex
-TO-BE-ADDED
+@article{rusnachenko2024nicolayr,
+  title={nicolay-r at SemEval-2024 Task 3: Using Flan-T5 for Reasoning Emotion Cause in Conversations with Chain-of-Thought on Emotion States},
+  booktitle = "Proceedings of the Annual Conference of the North American Chapter of the Association for Computational Linguistics",
+  author={Nicolay Rusnachenko and Huizhi Liang},
+  year= "2024",
+  month= jun,
+  address = "Mexico City, Mexico",
+  publisher = "Association for Computational Linguistics"
+}
 ```
 
 ## Acknowledgement
