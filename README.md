@@ -8,7 +8,7 @@
 enhanced
 and adapted for SemEval-2024 paper 
 [nicolay-r at SemEval-2024 Task 3.1: Reasoning Emotion Cause
-Supported by Emotion State with Chain-of-Thoughts]()**
+Supported by Emotion State with Chain-of-Thoughts](https://arxiv.org/abs/2404.03361)**
 
 > **Update 17 February 2024**: We support `--bf16` mode for launching Flan-T5 with `torch.bfloat16` type; 
 > this feature allows launching `xl`-sized model training with just a single NVidia-A100 (40GB)
