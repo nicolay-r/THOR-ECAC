@@ -2,6 +2,8 @@
 
 ![](https://img.shields.io/badge/Python-3.8-lightgreen.svg)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
+[![arXiv](https://img.shields.io/badge/arXiv-2404.03361-b31b1b.svg)](https://arxiv.org/abs/2404.03361)
+
 
 **The PyTorch reforged and forked version of the official 
 [THoR-framework](https://github.com/scofield7419/THOR-ISA),
