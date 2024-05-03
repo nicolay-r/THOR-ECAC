@@ -11,6 +11,8 @@ enhanced
 and adapted for SemEval-2024 paper 
 [nicolay-r at SemEval-2024 Task 3: Using Flan-T5 for Reasoning Emotion Cause in Conversations with Chain-of-Thought on Emotion States](https://arxiv.org/abs/2404.03361)**
 
+> **Update 03 March 2024**: `attrdict` represents the main limitation for code launching in `Python > 3.8`.
+
 > **Update 17 February 2024**: We support `--bf16` mode for launching Flan-T5 with `torch.bfloat16` type; 
 > this feature allows launching `xl`-sized model training with just a single NVidia-A100 (40GB)
 
