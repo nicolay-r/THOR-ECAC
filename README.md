@@ -1,4 +1,4 @@
-## THOR: Three-hop Reasoning for Emotion Cause Analysis in Context
+## THOR: Three-hop Reasoning for Emotion Cause Analysis in Context • [![twitter](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://twitter.com/nicolayr_/status/1777005686611751415)
 
 ![](https://img.shields.io/badge/Python-3.8-lightgreen.svg)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
@@ -10,6 +10,8 @@
 enhanced
 and adapted for SemEval-2024 paper 
 [nicolay-r at SemEval-2024 Task 3: Using Flan-T5 for Reasoning Emotion Cause in Conversations with Chain-of-Thought on Emotion States](https://arxiv.org/abs/2404.03361)**
+
+> **Update 05 March 2024**: The quick [arXiv paper](https://arxiv.org/abs/2404.03361) breakdowns 🔨 are @ [Twitter/X post](https://twitter.com/nicolayr_/status/1777005686611751415)
 
 > **Update 03 March 2024**: `attrdict` represents the main limitation for code launching in `Python > 3.8`.
 
