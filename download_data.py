@@ -4,7 +4,7 @@ from collections import Counter
 from os.path import dirname, join, realpath
 
 import yaml
-from attrdict import AttrDict
+from addict import Dict
 
 from src.service import CsvService, THoRFrameworkService, download
 
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Reading configuration.
-    config = AttrDict(yaml.load(open(args.config, 'r', encoding='utf-8'), Loader=yaml.FullLoader))
+    config = Dict(yaml.load(open(args.config, 'r', encoding='utf-8'), Loader=yaml.FullLoader))
     names = []
     for k, v in vars(args).items():
         setattr(config, k, v)

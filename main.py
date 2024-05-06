@@ -2,7 +2,7 @@ import argparse
 
 import yaml
 import torch
-from attrdict import AttrDict
+from addict import Dict
 import pandas as pd
 from transformers import GenerationConfig
 
@@ -19,7 +19,7 @@ from src.model import LLMBackbone
 
 class Template:
     def __init__(self, args):
-        config = AttrDict(yaml.load(open(args.config, 'r', encoding='utf-8'), Loader=yaml.FullLoader))
+        config = Dict(yaml.load(open(args.config, 'r', encoding='utf-8'), Loader=yaml.FullLoader))
         names = []
         for k, v in vars(args).items():
             setattr(config, k, v)

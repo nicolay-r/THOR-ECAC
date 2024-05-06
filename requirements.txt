@@ -1,4 +1,4 @@
-attrdict==2.0.1
+addict
 PyYAML==6.0
 transformers==4.38.0
 numpy

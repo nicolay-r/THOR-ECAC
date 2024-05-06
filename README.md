@@ -1,6 +1,6 @@
 ## THOR: Three-hop Reasoning for Emotion Cause Analysis in Context • [![twitter](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://twitter.com/nicolayr_/status/1777005686611751415)
 
-![](https://img.shields.io/badge/Python-3.8-lightgreen.svg)
+![](https://img.shields.io/badge/Python-3.10-lightgreen.svg)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
 [![arXiv](https://img.shields.io/badge/arXiv-2404.03361-b31b1b.svg)](https://arxiv.org/abs/2404.03361)
 
@@ -11,9 +11,9 @@ enhanced
 and adapted for SemEval-2024 paper 
 [nicolay-r at SemEval-2024 Task 3: Using Flan-T5 for Reasoning Emotion Cause in Conversations with Chain-of-Thought on Emotion States](https://arxiv.org/abs/2404.03361)**
 
-> **Update 05 March 2024**: The quick [arXiv paper](https://arxiv.org/abs/2404.03361) breakdowns 🔨 are @ [Twitter/X post](https://twitter.com/nicolayr_/status/1777005686611751415)
+> **Update 06 March 2024**: 🔓 `attrdict` represents the main limitation for code launching in `Python 3.10` and hence been switched to `addict` (see [Issue#2](https://github.com/nicolay-r/THOR-ECAC/issues/2)).
 
-> **Update 03 March 2024**: `attrdict` represents the main limitation for code launching in `Python > 3.8`.
+> **Update 05 March 2024**: The quick [arXiv paper](https://arxiv.org/abs/2404.03361) breakdowns 🔨 are @ [Twitter/X post](https://twitter.com/nicolayr_/status/1777005686611751415)
 
 > **Update 17 February 2024**: We support `--bf16` mode for launching Flan-T5 with `torch.bfloat16` type; 
 > this feature allows launching `xl`-sized model training with just a single NVidia-A100 (40GB)
@@ -67,9 +67,9 @@ To form the Codalab Submission, please [follow this section](#submitting-results
 ## Usage<a name="code" />
 
 ### Requirement<a name="requirement" />
-![](https://img.shields.io/badge/Python-3.8-lightgreen.svg)
+![](https://img.shields.io/badge/Python-3.10-lightgreen.svg)
 
-This project has been tested under **Python-3.8**. 
+This project has been tested under **Python-3.8** and [adapted](https://github.com/nicolay-r/THOR-ECAC/issues/2) for the **Python-3.10**. 
 
 Using `pip`, you can install the necessary dependencies as follows:
 ``` bash 
