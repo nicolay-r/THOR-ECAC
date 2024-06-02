@@ -116,6 +116,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--cuda_index', default=0)
+    parser.add_argument('-m', '--model_path', default='google/flan-t5-base')
     parser.add_argument('-r', '--reasoning', default=None,
                         choices=['prompt_state', 'prompt_cause', 'thor_state', 'thor_cause', 'thor_cause_rr'],
                         help='with one-step prompt or multi-step thor reasoning')

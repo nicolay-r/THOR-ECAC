@@ -133,6 +133,7 @@ Use the [main.py](main.py) script with command-line arguments to run the
 
 ```bash
 python main.py -c <CUDA_INDEX> \
+    -m "google/flan-t5-base" \
     -r [prompt|thor_state|thor_cause|thor_cause_rr]  \ 
     -d [state_se24|cause_se24] \
     -lf "optional/path/to/the/pretrained/state" \
@@ -149,6 +150,7 @@ python main.py -c <CUDA_INDEX> \
 
 * `-c`, `--cuda_index`: Index of the GPU to use for computation (default: `0`).
 * `-d`, `--data_name`: Name of the dataset. Choices are `state_se24` or `cause_se24`.
+* `-m`, `--model_path`: Path to the model on hugging face.
 * `-r`, `--reasoning`: Specifies the reasoning mode, with one-step prompt or multi-step thor mode.
 * `-li`, `--load_iter`: load a state on specific index from the same `data_name` resource (default: `-1`, not applicable.)
 * `-lp`, `--load_path`: load a state on specific path.
