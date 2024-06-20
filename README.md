@@ -1,9 +1,8 @@
-## THOR: Three-hop Reasoning for Emotion Cause Analysis in Context • [![twitter](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://twitter.com/nicolayr_/status/1777005686611751415)
+## THOR: Three-hop Reasoning for Emotion Cause Analysis in Context • [![twitter](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://x.com/nicolayr_/status/1803705227108847866)
 
 ![](https://img.shields.io/badge/Python-3.10-lightgreen.svg)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
 [![arXiv](https://img.shields.io/badge/arXiv-2404.03361-b31b1b.svg)](https://arxiv.org/abs/2404.03361)
-
+[![twitter](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://x.com/nicolayr_/status/1803705227108847866)
 
 **The PyTorch reforged and forked version of the official 
 [THoR-framework](https://github.com/scofield7419/THOR-ISA),
@@ -26,7 +25,7 @@ and adapted for SemEval-2024 paper
 
 ## Contents
 * [Overview](#overview)
-* [**Quickstart in GoogleColab**](#quickstart)
+* [📙 **Quickstart in GoogleColab**](#quickstart)
 * [Usage](#code)
   * [Requirement](#requirement)
   * [Dataset Preparation](#data)
@@ -55,7 +54,8 @@ and adapted for SemEval-2024 paper
 
 ## Quickstart
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
+### 🧪 [Quick start with Emotion CoT ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/SemEval_2024_Task_3_FlanT5_Finetuned_Model_Usage.ipynb)
+### 🔥 [Experiments Reproduction ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
 
 We provide a [google-colab notebook](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
 for downloading all the necessary data, followed by launching
