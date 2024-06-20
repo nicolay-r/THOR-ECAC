@@ -59,11 +59,10 @@ and adapted for SemEval-2024 paper
 ### 🧪 [Quick start with Emotion CoT ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/SemEval_2024_Task_3_FlanT5_Finetuned_Model_Usage.ipynb)
 ### 🔥 [Experiments Reproduction ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
 
-We provide a [google-colab notebook](https://colab.research.google.com/github/nicolay-r/THOR-ECAC/blob/master/THoR_Finetuning_SemEval2023_t3_1_public.ipynb)
-for downloading all the necessary data, followed by launching
+We provide 🔥 notebook for downloading all the necessary data, followed by launching
 experiments with `NVidia-V100`/ or `NVidia-A100`.
 
-To form the Codalab Submission, please [follow this section](#submitting-results-on-codalab).
+**Codalab Submission formation**: please [follow this section](#submitting-results-on-codalab).
 
 
 ## Usage<a name="code" />
