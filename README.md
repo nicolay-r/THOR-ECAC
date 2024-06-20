@@ -10,6 +10,8 @@ enhanced
 and adapted for SemEval-2024 paper 
 [nicolay-r at SemEval-2024 Task 3: Using Flan-T5 for Reasoning Emotion Cause in Conversations with Chain-of-Thought on Emotion States](https://arxiv.org/abs/2404.03361)**
 
+> **Update 06 June 2024:** 🤗 Model and its description / tutorial for usage has been uploaded on `huggingface`: [🤗 nicolay-r/flan-t5-emotion-cause-thor-base](https://huggingface.co/nicolay-r/flan-t5-emotion-cause-thor-base)
+
 > **Update 06 March 2024**: 🔓 `attrdict` represents the main limitation for code launching in `Python 3.10` and hence been switched to `addict` (see [Issue#2](https://github.com/nicolay-r/THOR-ECAC/issues/2)).
 
 > **Update 05 March 2024**: The quick [arXiv paper](https://arxiv.org/abs/2404.03361) breakdowns 🔨 are @ [Twitter/X post](https://twitter.com/nicolayr_/status/1777005686611751415)
