@@ -201,7 +201,7 @@ You can cite this work as follows:
   year= "2024",
   month= jun,
   address = "Mexico City, Mexico",
-  publisher = "Association for Computational Linguistics"
+  publisher = "Annual Conference of the North American Chapter of the Association for Computational Linguistics"
 }
 ```
 
