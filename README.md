@@ -3,6 +3,7 @@
 ![](https://img.shields.io/badge/Python-3.10-lightgreen.svg)
 [![arXiv](https://img.shields.io/badge/arXiv-2404.03361-b31b1b.svg)](https://arxiv.org/abs/2404.03361)
 [![twitter](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://x.com/nicolayr_/status/1803705227108847866)
+[![Youtube badge](https://img.shields.io/badge/-Youtube-Cc4c4c?style=flat-square&logo=Youtube&logoColor=white&link=https://twitter.com/nicolayr_)](https://youtu.be/vRVDQa7vfkU)
 
 **The PyTorch reforged and forked version of the official 
 [THoR-framework](https://github.com/scofield7419/THOR-ISA),
