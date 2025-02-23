@@ -13,7 +13,16 @@ and adapted for SemEval-2024 paper
 
 [![](https://markdown-videos-api.jorgenkh.no/youtube/vRVDQa7vfkU)](https://youtu.be/vRVDQa7vfkU)
 
+<details>
+<summary>
+
+### **Latest Updates**   
+
+> **Update February 23 2025:** 🔥 **BATCHING MODE SUPPORT**. See 🌌 [Flan-T5 provider](https://github.com/nicolay-r/nlp-thirdgate/blob/master/llm/transformers_flan_t5.py) for [bulk-chain](https://github.com/nicolay-r/bulk-chain) project. Test [is available here](https://github.com/nicolay-r/bulk-chain/blob/master/test/test_provider_batching.py)
+
 > **Update 06 June 2024:** 🤗 Model and its description / tutorial for usage has been uploaded on `huggingface`: [🤗 nicolay-r/flan-t5-emotion-cause-thor-base](https://huggingface.co/nicolay-r/flan-t5-emotion-cause-thor-base)
+
+</summary>
 
 > **Update 06 March 2024**: 🔓 `attrdict` represents the main limitation for code launching in `Python 3.10` and hence been switched to `addict` (see [Issue#2](https://github.com/nicolay-r/THOR-ECAC/issues/2)).
 
@@ -27,6 +36,8 @@ and adapted for SemEval-2024 paper
 > [🔧 enhancements and changes](CHANGESET.md)
 
 > **NOTE:** [List of the changes](CHANGESET.md) from the original THoR
+
+</details>
 
 ## Contents
 * [Overview](#overview)
