@@ -11,7 +11,11 @@ enhanced
 and adapted for SemEval-2024 paper 
 [nicolay-r at SemEval-2024 Task 3: Using Flan-T5 for Reasoning Emotion Cause in Conversations with Chain-of-Thought on Emotion States](https://arxiv.org/abs/2404.03361)**
 
+<div align="center">
+
 [![](https://markdown-videos-api.jorgenkh.no/youtube/vRVDQa7vfkU)](https://youtu.be/vRVDQa7vfkU)
+
+</div>
 
 <details>
 <summary>
